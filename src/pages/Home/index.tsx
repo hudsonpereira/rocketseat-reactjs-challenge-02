@@ -1,9 +1,19 @@
 import { Clock, Coffee, Package, ShoppingCart } from "phosphor-react";
 import { useTheme } from "styled-components";
 import { Icon } from "../../components/Icon";
+import { NumberInput } from "../../components/NumberInput";
 import coffeeBanner from "./../../assets/coffee-banner.svg";
 import coffeeCard from "./../../assets/coffee-card.svg";
-import { BannerContainer, BannerContent, ItemsGrid } from "./styles";
+import {
+  BannerContainer,
+  BannerContent,
+  Card,
+  CardFooter,
+  CardsWrapper,
+  ItemsGrid,
+  MainWrapper,
+  Tags,
+} from "./styles";
 
 export function Home() {
   const theme = useTheme();
@@ -23,7 +33,7 @@ export function Home() {
             <ItemsGrid>
               <div>
                 <Icon
-                  icon={<ShoppingCart weight="fill" />}
+                  icon={<ShoppingCart weight="fill" color="white" />}
                   backgroundColor={theme["yellow-dark"]}
                 />
                 Compra simples e segura
@@ -31,7 +41,7 @@ export function Home() {
 
               <div>
                 <Icon
-                  icon={<Package weight="fill" />}
+                  icon={<Package weight="fill" color="white" />}
                   backgroundColor={theme["base-text"]}
                 />
                 Embalagem mantém o café intacto
@@ -39,7 +49,7 @@ export function Home() {
 
               <div>
                 <Icon
-                  icon={<Clock weight="fill" />}
+                  icon={<Clock weight="fill" color="white" />}
                   backgroundColor={theme["yellow"]}
                 />
                 Entrega rápida e rastreada
@@ -47,7 +57,7 @@ export function Home() {
 
               <div>
                 <Icon
-                  icon={<Coffee weight="fill" />}
+                  icon={<Coffee weight="fill" color="white" />}
                   backgroundColor={theme["purple"]}
                 />
                 Embalagem mantém o café intacto
@@ -61,29 +71,105 @@ export function Home() {
       </BannerContainer>
 
       {/* MAIN */}
-      <div>
+      <MainWrapper>
         <h1>Nossos cafés</h1>
 
         {/* CARDS WRAPPER */}
-        <div>
+        <CardsWrapper>
           {/* CARD */}
-          <div>
+          <Card>
             <img src={coffeeCard} alt="" />
-            <div>Tradicional</div>
+            <Tags>
+              <span>Tradicional</span>
+              <span>Tradicional</span>
+            </Tags>
 
-            <h1>Expresso Tradicional</h1>
+            <h2>Expresso Tradicional</h2>
             <p>O tradicional café feito com água quente e grãos moídos</p>
 
-            <div>
-              <span>R$ 9,90</span>
-              <input type="number" />
+            <CardFooter>
+              <span>9,90</span>
+              <NumberInput />
               <button>
-                <ShoppingCart />
+                <ShoppingCart size={22} weight="fill" />
               </button>
-            </div>
-          </div>
-        </div>
-      </div>
+            </CardFooter>
+          </Card>
+
+          <Card>
+            <img src={coffeeCard} alt="" />
+            <Tags>
+              <span>Tradicional</span>
+              <span>Tradicional</span>
+            </Tags>
+
+            <h2>Expresso Tradicional</h2>
+            <p>O tradicional café feito com água quente e grãos moídos</p>
+
+            <CardFooter>
+              <span>9,90</span>
+              <NumberInput />
+              <button>
+                <ShoppingCart size={22} weight="fill" />
+              </button>
+            </CardFooter>
+          </Card>
+          <Card>
+            <img src={coffeeCard} alt="" />
+            <Tags>
+              <span>Tradicional</span>
+              <span>Tradicional</span>
+            </Tags>
+
+            <h2>Expresso Tradicional</h2>
+            <p>O tradicional café feito com água quente e grãos moídos</p>
+
+            <CardFooter>
+              <span>9,90</span>
+              <NumberInput />
+              <button>
+                <ShoppingCart size={22} weight="fill" />
+              </button>
+            </CardFooter>
+          </Card>
+          <Card>
+            <img src={coffeeCard} alt="" />
+            <Tags>
+              <span>Tradicional</span>
+              <span>Tradicional</span>
+            </Tags>
+
+            <h2>Expresso Tradicional</h2>
+            <p>O tradicional café feito com água quente e grãos moídos</p>
+
+            <CardFooter>
+              <span>9,90</span>
+              <NumberInput />
+              <button>
+                <ShoppingCart size={22} weight="fill" />
+              </button>
+            </CardFooter>
+          </Card>
+          <Card>
+            <img src={coffeeCard} alt="" />
+            <Tags>
+              <span>Tradicional</span>
+              <span>Tradicional</span>
+            </Tags>
+
+            <h2>Expresso Tradicional</h2>
+            <p>O tradicional café feito com água quente e grãos moídos</p>
+
+            <CardFooter>
+              <span>9,90</span>
+              <NumberInput />
+              <button>
+                <ShoppingCart size={22} weight="fill" />
+              </button>
+            </CardFooter>
+          </Card>
+        </CardsWrapper>
+      </MainWrapper>
     </div>
   );
 }

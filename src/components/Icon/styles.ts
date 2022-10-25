@@ -15,4 +15,8 @@ export const IconWrapper = styled.span<IconWrapperProps>`
   background-color: ${props => props.backgroundColor};
   color: white;
   margin-right: .75rem;
+
+  svg {
+    color: white;
+  }
 `
